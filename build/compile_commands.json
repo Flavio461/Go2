@@ -1,0 +1,44 @@
+[
+{
+  "directory": "C:/Projects/Go2/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src/utils -g -o CMakeFiles\\Go2.dir\\src\\main.cpp.obj -c C:\\Projects\\Go2\\src\\main.cpp",
+  "file": "C:\\Projects\\Go2\\src\\main.cpp",
+  "output": "CMakeFiles\\Go2.dir\\src\\main.cpp.obj"
+},
+{
+  "directory": "C:/Projects/Go2/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src/utils -g -o CMakeFiles\\Go2.dir\\src\\utils\\user.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\user.cpp",
+  "file": "C:\\Projects\\Go2\\src\\utils\\user.cpp",
+  "output": "CMakeFiles\\Go2.dir\\src\\utils\\user.cpp.obj"
+},
+{
+  "directory": "C:/Projects/Go2/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src/utils -g -o CMakeFiles\\Go2.dir\\src\\utils\\car.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\car.cpp",
+  "file": "C:\\Projects\\Go2\\src\\utils\\car.cpp",
+  "output": "CMakeFiles\\Go2.dir\\src\\utils\\car.cpp.obj"
+},
+{
+  "directory": "C:/Projects/Go2/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src/utils -g -o CMakeFiles\\Go2.dir\\src\\utils\\driver.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\driver.cpp",
+  "file": "C:\\Projects\\Go2\\src\\utils\\driver.cpp",
+  "output": "CMakeFiles\\Go2.dir\\src\\utils\\driver.cpp.obj"
+},
+{
+  "directory": "C:/Projects/Go2/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src/utils -g -o CMakeFiles\\Go2.dir\\src\\utils\\route.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\route.cpp",
+  "file": "C:\\Projects\\Go2\\src\\utils\\route.cpp",
+  "output": "CMakeFiles\\Go2.dir\\src\\utils\\route.cpp.obj"
+},
+{
+  "directory": "C:/Projects/Go2/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src/utils -g -o CMakeFiles\\Go2.dir\\src\\utils\\routeHandler.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\routeHandler.cpp",
+  "file": "C:\\Projects\\Go2\\src\\utils\\routeHandler.cpp",
+  "output": "CMakeFiles\\Go2.dir\\src\\utils\\routeHandler.cpp.obj"
+},
+{
+  "directory": "C:/Projects/Go2/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src/utils -g -o CMakeFiles\\Go2.dir\\src\\utils\\routePath.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\routePath.cpp",
+  "file": "C:\\Projects\\Go2\\src\\utils\\routePath.cpp",
+  "output": "CMakeFiles\\Go2.dir\\src\\utils\\routePath.cpp.obj"
+}
+]
