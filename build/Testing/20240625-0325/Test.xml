@@ -24,11 +24,11 @@
 	ProcessorClockFrequency="4100"
 	>
 	<Testing>
-		<StartDateTime>Jun 25 16:21 Hora oficial do Brasil</StartDateTime>
-		<StartTestTime>1719343263</StartTestTime>
+		<StartDateTime>Jun 25 19:01 Hora oficial do Brasil</StartDateTime>
+		<StartTestTime>1719352862</StartTestTime>
 		<TestList/>
-		<EndDateTime>Jun 25 16:21 Hora oficial do Brasil</EndDateTime>
-		<EndTestTime>1719343263</EndTestTime>
+		<EndDateTime>Jun 25 19:01 Hora oficial do Brasil</EndDateTime>
+		<EndTestTime>1719352862</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

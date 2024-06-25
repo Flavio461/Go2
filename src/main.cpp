@@ -73,7 +73,7 @@ int main() {
                     return true;
                 }
                 wcout << L"Motorista escolhido: " << *chosen << endl;
-                wcout << L"Valor da viagem: " << passengers*2*distance + weight*.2*distance << L"R$" endl;
+                wcout << L"Valor da viagem: " << passengers*2*distance + weight*.2*distance << L"R$" << endl;
                 return true;
             }, true, nullptr, db)
         )
