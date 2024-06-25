@@ -12,6 +12,7 @@ session::session() {
     password = inputTextRoute(L"Senha", "password", L"Digite sua senha (pelo menos 8 caracteres): ", [](std::wstring const& input) -> bool {
         return input.size() >= 8;
     });
+    this->db = new dataBase();
 }
 
 void session::assemblyRegisterDriver() {
@@ -126,7 +127,7 @@ void session::assemblyRegisterDriver() {
                 return false;
             }
 
-            car *c = new car(0,
+            car *c = new car(
                 r->getPayload()->at("modelo").c_str(),
                 r->getPayload()->at("placa").c_str());
 
@@ -134,12 +135,12 @@ void session::assemblyRegisterDriver() {
                 r->getPayload()->at("nome").c_str(),
                 r->getPayload()->at("email").c_str(),
                 L"", r->getPayload()->at("cnh").c_str(),
-                r->getPayload()->at("senha").c_str(), c);
-
+                c);
             std::wcout << *d;
 
+            r->getDb()->writeDriver(d, sha256(utf8_encode(r->getPayload()->at("password").c_str())));
             return true;
-        }, true
+        }, true, nullptr, this->db
     ));
 }
 
@@ -153,6 +154,7 @@ void session::assemblyRegisterUser() {
         return input.size() >= 8;
     });
     registerUser = (new route(L"Cadastrar usuário", new std::unordered_map<std::string, std::wstring>{
+
         {"type", L"user"},
         {"name", L""},
         {"email", L""},
@@ -190,6 +192,7 @@ void session::assemblyRegisterUser() {
     ->addRoute(phone)
     ->addRoute(new route(L"Finalizar cadastro", new std::unordered_map<std::string, std::wstring>{{"displayText", L"Finalizar cadastro"}}, 
         [](route *r, bool(*verification)(std::wstring const&)) -> bool {
+            r->getDb()->writeUser(new user(L"Lucasa", L"Flavio@gmail.com", L"123456"), sha256("12345678"));
             for (auto o : *r->getPayload()) {
                 if (o.first == "password" || o.first == "confirm-password") {
                     std::wcout << o.first.c_str() << L": " << std::wstring(o.second.size(), L'•') << std::endl;
@@ -197,6 +200,7 @@ void session::assemblyRegisterUser() {
                 }
                 std::wcout << o.first.c_str() << L": " << o.second << std::endl;
             }
+
             if (r->getPayload() == nullptr ||
                 r->getPayload()->at("name").empty() ||
                 r->getPayload()->at("email").empty() ||
@@ -215,11 +219,12 @@ void session::assemblyRegisterUser() {
             user *u = new user(
                 r->getPayload()->at("name").c_str(),
                 r->getPayload()->at("email").c_str(),
-                r->getPayload()->at("phone").c_str(),
-                r->getPayload()->at("password").c_str());
-            std::wcout << *u;
+                r->getPayload()->at("phone").c_str());
+            std::wcout << *u << std::endl;
+            r->getDb()->writeUser(u, sha256(utf8_encode(r->getPayload()->at("password").c_str())));
+
             return true;
-        }, true
+        }, true, nullptr, this->db
     ));
 }
 
@@ -255,7 +260,7 @@ void session::assemblyLoginDriver() {
     ->addRoute(email)
     ->addRoute(password)
     ->addRoute(new route(L"Finalizar login", new std::unordered_map<std::string, std::wstring>{{"displayText", L"Finalizar login"}}, 
-        [](route *r, bool(*verification)(std::wstring const&)) -> bool {
+    [](route *r, bool(*verification)(std::wstring const&)) -> bool {
             for (auto o : *r->getPayload()) {
                 if (o.first == "password" || o.first == "confirm-password") {
                     std::wcout << o.first.c_str() << L": " << std::wstring(o.second.size(), L'•') << std::endl;
@@ -266,11 +271,17 @@ void session::assemblyLoginDriver() {
             if (r->getPayload() == nullptr ||
                 r->getPayload()->at("email").empty() ||
                 r->getPayload()->at("password").empty()) {
-                std::wcout << "Preencha todos os campos!" << std::endl;
+                std::wcout << L"Preencha todos os campos!" << std::endl;
+                return false;
+            }
+
+            driver* d = r->getDb()->getDriver(r->getPayload()->at("email").c_str(), sha256(utf8_encode(r->getPayload()->at("password").c_str())));
+            if (d == nullptr) {
+                std::wcout << L"Motorista não encontrado!" << std::endl;
                 return false;
             }
             return true;
-        }, true
+        }, true, nullptr, this->db
     ));
 }
 
@@ -317,12 +328,19 @@ void session::assemblyLoginUser() {
             if (r->getPayload() == nullptr ||
                 r->getPayload()->at("email").empty() ||
                 r->getPayload()->at("password").empty()) {
-                std::wcout << "Preencha todos os campos!" << std::endl;
+                std::wcout << L"Preencha todos os campos!" << std::endl;
                 return false;
             }
 
+            user* u = r->getDb()->getUser(r->getPayload()->at("email").c_str(), sha256(utf8_encode(r->getPayload()->at("password").c_str())));
+            if (u == nullptr) {
+                std::wcout << L"Usuário não encontrado!" << std::endl;
+                return false;
+            }
+
+            std::wcout << *u << std::endl;
             return true;
-        }, true
+        }, true, nullptr, this->db
     ));
 }
 

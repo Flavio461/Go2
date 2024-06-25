@@ -7,7 +7,7 @@ class car {
     int id;
     wchar_t *model, *plate;
     public:
-        car(int id, const wchar_t* model, const wchar_t* plate);
+        car(const wchar_t* model, const wchar_t* plate);
         ~car();
         void setModel(const wchar_t* model);
         void setPlate(const wchar_t* plate);

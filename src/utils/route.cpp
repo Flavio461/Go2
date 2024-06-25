@@ -2,6 +2,7 @@
 #include <iostream>
 
 route::route(std::wstring name, std::unordered_map<std::string, std::wstring> *payload, bool (*execute)(route*, bool(*)(std::wstring const&)), bool autoReturn, bool(*validateInput)(std::wstring const&)): name(name), size(), payload(payload), execute(execute), autoReturn(autoReturn), validateInput(validateInput) {}
+route::route(std::wstring name, std::unordered_map<std::string, std::wstring> *payload, bool (*execute)(route*, bool(*)(std::wstring const&)), bool autoReturn, bool(*validateInput)(std::wstring const&), dataBase *db): name(name), size(), payload(payload), execute(execute), autoReturn(autoReturn), validateInput(validateInput), db(db) {}
 route::~route() {delete[] nextRoutes; if(payload!=nullptr) delete payload;}
 route* route::addRoute(route* r) {
     route** newRoutes = new route*[size+1];
@@ -62,6 +63,9 @@ void route::showRoutes() {
 }
 bool route::isAutoReturn() {
     return autoReturn;
+}
+dataBase* route::getDb() {
+    return db;
 }
 std::wostream& operator<<(std::wostream& out, const route& r) {
     out << r.name;
