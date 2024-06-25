@@ -1,18 +1,18 @@
 # ninja log v5
+27	503	7406358762706081	CMakeFiles/Go2.dir/src/utils/driver.cpp.obj	11ac08c38b238a66
+25	699	7410564184913492	CMakeFiles/Go2.dir/src/utils/models/driver.cpp.obj	bc0c1b01f73a279f
+22	670	7410564184547916	CMakeFiles/Go2.dir/src/utils/models/car.cpp.obj	e2412c1280ce5bfe
+39	1359	7410564191603132	CMakeFiles/Go2.dir/src/utils/models/routeTemplates.cpp.obj	150e0a57a71bff26
+35	929	7410564187275027	CMakeFiles/Go2.dir/src/utils/routePath.cpp.obj	1bb9057f613b8efc
+50	1112	7410564189126745	CMakeFiles/Go2.dir/src/utils/data_base/dataBaseAPI.cpp.obj	989b3c11f8e97239
+2	372	7353747817479761	CMakeFiles/Go2.dir/main.cpp.obj	2db2abd333b7933e
+28	1080	7410564188796784	CMakeFiles/Go2.dir/src/utils/route.cpp.obj	af82fbf21e1990cf
 21	411	7357649252738719	CMakeFiles/Go2.dir/src/utils/routes.cpp.obj	eada938775c37385
-19	613	7406350281397244	CMakeFiles/Go2.dir/src/utils/user.cpp.obj	9eb286da031f8c11
 23	512	7406358762786432	CMakeFiles/Go2.dir/src/utils/car.cpp.obj	78520b2999350498
 14	1660	7410568129386010	CMakeFiles/Go2.dir/src/main.cpp.obj	6e98934716c6e3d8
+19	613	7406350281397244	CMakeFiles/Go2.dir/src/utils/user.cpp.obj	9eb286da031f8c11
 46	1773	7410564195744365	CMakeFiles/Go2.dir/src/utils/data_base/SHA256.cpp.obj	285278a6e3b8997
 19	710	7410564185083462	CMakeFiles/Go2.dir/src/utils/models/user.cpp.obj	799ab127aee3c621
 42	2751	7410564205521520	CMakeFiles/Go2.dir/src/routes/session.cpp.obj	197438acdbb8cae4
 31	1062	7410564188616782	CMakeFiles/Go2.dir/src/utils/routeHandler.cpp.obj	ad5b447ed88d6b3b
 1660	1792	7410568130611209	Go2.exe	a07ed6dd2dc924b7
-39	1359	7410564191603132	CMakeFiles/Go2.dir/src/utils/models/routeTemplates.cpp.obj	150e0a57a71bff26
-22	670	7410564184547916	CMakeFiles/Go2.dir/src/utils/models/car.cpp.obj	e2412c1280ce5bfe
-25	699	7410564184913492	CMakeFiles/Go2.dir/src/utils/models/driver.cpp.obj	bc0c1b01f73a279f
-27	503	7406358762706081	CMakeFiles/Go2.dir/src/utils/driver.cpp.obj	11ac08c38b238a66
-28	1080	7410564188796784	CMakeFiles/Go2.dir/src/utils/route.cpp.obj	af82fbf21e1990cf
-2	372	7353747817479761	CMakeFiles/Go2.dir/main.cpp.obj	2db2abd333b7933e
-50	1112	7410564189126745	CMakeFiles/Go2.dir/src/utils/data_base/dataBaseAPI.cpp.obj	989b3c11f8e97239
-35	929	7410564187275027	CMakeFiles/Go2.dir/src/utils/routePath.cpp.obj	1bb9057f613b8efc
