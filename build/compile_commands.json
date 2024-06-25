@@ -1,67 +1,67 @@
 [
 {
   "directory": "C:/Projects/Go2/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -g -o CMakeFiles\\Go2.dir\\src\\main.cpp.obj -c C:\\Projects\\Go2\\src\\main.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -O3 -DNDEBUG -o CMakeFiles\\Go2.dir\\src\\main.cpp.obj -c C:\\Projects\\Go2\\src\\main.cpp",
   "file": "C:\\Projects\\Go2\\src\\main.cpp",
   "output": "CMakeFiles\\Go2.dir\\src\\main.cpp.obj"
 },
 {
   "directory": "C:/Projects/Go2/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -g -o CMakeFiles\\Go2.dir\\src\\utils\\models\\user.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\models\\user.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -O3 -DNDEBUG -o CMakeFiles\\Go2.dir\\src\\utils\\models\\user.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\models\\user.cpp",
   "file": "C:\\Projects\\Go2\\src\\utils\\models\\user.cpp",
   "output": "CMakeFiles\\Go2.dir\\src\\utils\\models\\user.cpp.obj"
 },
 {
   "directory": "C:/Projects/Go2/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -g -o CMakeFiles\\Go2.dir\\src\\utils\\models\\car.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\models\\car.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -O3 -DNDEBUG -o CMakeFiles\\Go2.dir\\src\\utils\\models\\car.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\models\\car.cpp",
   "file": "C:\\Projects\\Go2\\src\\utils\\models\\car.cpp",
   "output": "CMakeFiles\\Go2.dir\\src\\utils\\models\\car.cpp.obj"
 },
 {
   "directory": "C:/Projects/Go2/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -g -o CMakeFiles\\Go2.dir\\src\\utils\\models\\driver.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\models\\driver.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -O3 -DNDEBUG -o CMakeFiles\\Go2.dir\\src\\utils\\models\\driver.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\models\\driver.cpp",
   "file": "C:\\Projects\\Go2\\src\\utils\\models\\driver.cpp",
   "output": "CMakeFiles\\Go2.dir\\src\\utils\\models\\driver.cpp.obj"
 },
 {
   "directory": "C:/Projects/Go2/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -g -o CMakeFiles\\Go2.dir\\src\\utils\\route.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\route.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -O3 -DNDEBUG -o CMakeFiles\\Go2.dir\\src\\utils\\route.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\route.cpp",
   "file": "C:\\Projects\\Go2\\src\\utils\\route.cpp",
   "output": "CMakeFiles\\Go2.dir\\src\\utils\\route.cpp.obj"
 },
 {
   "directory": "C:/Projects/Go2/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -g -o CMakeFiles\\Go2.dir\\src\\utils\\routeHandler.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\routeHandler.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -O3 -DNDEBUG -o CMakeFiles\\Go2.dir\\src\\utils\\routeHandler.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\routeHandler.cpp",
   "file": "C:\\Projects\\Go2\\src\\utils\\routeHandler.cpp",
   "output": "CMakeFiles\\Go2.dir\\src\\utils\\routeHandler.cpp.obj"
 },
 {
   "directory": "C:/Projects/Go2/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -g -o CMakeFiles\\Go2.dir\\src\\utils\\routePath.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\routePath.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -O3 -DNDEBUG -o CMakeFiles\\Go2.dir\\src\\utils\\routePath.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\routePath.cpp",
   "file": "C:\\Projects\\Go2\\src\\utils\\routePath.cpp",
   "output": "CMakeFiles\\Go2.dir\\src\\utils\\routePath.cpp.obj"
 },
 {
   "directory": "C:/Projects/Go2/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -g -o CMakeFiles\\Go2.dir\\src\\utils\\models\\routeTemplates.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\models\\routeTemplates.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -O3 -DNDEBUG -o CMakeFiles\\Go2.dir\\src\\utils\\models\\routeTemplates.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\models\\routeTemplates.cpp",
   "file": "C:\\Projects\\Go2\\src\\utils\\models\\routeTemplates.cpp",
   "output": "CMakeFiles\\Go2.dir\\src\\utils\\models\\routeTemplates.cpp.obj"
 },
 {
   "directory": "C:/Projects/Go2/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -g -o CMakeFiles\\Go2.dir\\src\\routes\\session.cpp.obj -c C:\\Projects\\Go2\\src\\routes\\session.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -O3 -DNDEBUG -o CMakeFiles\\Go2.dir\\src\\routes\\session.cpp.obj -c C:\\Projects\\Go2\\src\\routes\\session.cpp",
   "file": "C:\\Projects\\Go2\\src\\routes\\session.cpp",
   "output": "CMakeFiles\\Go2.dir\\src\\routes\\session.cpp.obj"
 },
 {
   "directory": "C:/Projects/Go2/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -g -o CMakeFiles\\Go2.dir\\src\\utils\\data_base\\SHA256.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\data_base\\SHA256.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -O3 -DNDEBUG -o CMakeFiles\\Go2.dir\\src\\utils\\data_base\\SHA256.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\data_base\\SHA256.cpp",
   "file": "C:\\Projects\\Go2\\src\\utils\\data_base\\SHA256.cpp",
   "output": "CMakeFiles\\Go2.dir\\src\\utils\\data_base\\SHA256.cpp.obj"
 },
 {
   "directory": "C:/Projects/Go2/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -g -o CMakeFiles\\Go2.dir\\src\\utils\\data_base\\dataBaseAPI.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\data_base\\dataBaseAPI.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -IC:/Projects/Go2/src -O3 -DNDEBUG -o CMakeFiles\\Go2.dir\\src\\utils\\data_base\\dataBaseAPI.cpp.obj -c C:\\Projects\\Go2\\src\\utils\\data_base\\dataBaseAPI.cpp",
   "file": "C:\\Projects\\Go2\\src\\utils\\data_base\\dataBaseAPI.cpp",
   "output": "CMakeFiles\\Go2.dir\\src\\utils\\data_base\\dataBaseAPI.cpp.obj"
 }
