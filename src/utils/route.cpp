@@ -1,7 +1,7 @@
 #include "route.hpp"
 #include <iostream>
 
-route::route(std::wstring name, std::unordered_map<std::string, std::wstring> *payload, void (*execute)(route*)): name(name), size(), payload(payload), execute(execute) {}
+route::route(std::wstring name, std::unordered_map<std::string, std::wstring> *payload, bool (*execute)(route*, bool(*)(std::wstring const&)), bool autoReturn, bool(*validateInput)(std::wstring const&)): name(name), size(), payload(payload), execute(execute), autoReturn(autoReturn), validateInput(validateInput) {}
 route::~route() {delete[] nextRoutes; if(payload!=nullptr) delete payload;}
 route* route::addRoute(route* r) {
     route** newRoutes = new route*[size+1];
@@ -33,15 +33,21 @@ void route::setPayload(std::unordered_map<std::string, std::wstring> *p) {
 void route::setName(std::wstring n) {
     name = n;
 }
-void route::setFunction(void (*f)(route*)) {
+void route::setFunction(bool (*f)(route*, bool(*)(std::wstring const&))) {
     execute = f;
 }
 route* route::getRoute(size_t i) {
     if(i>size-1) return nullptr;
     return nextRoutes[i];
 }
-void (*route::getFunction())(route*) {
+bool (*route::getFunction())(route*, bool(*)(std::wstring const&)) {
     return execute;
+}
+bool (*route::getValidateInput())(std::wstring const&) {
+    return validateInput;
+}
+void route::setValidateInput(bool(*v)(std::wstring const&)) {
+    validateInput = v;
 }
 size_t route::getSize() {
     return size;
@@ -53,6 +59,9 @@ void route::showRoutes() {
     for(size_t i = 0; i < size; i++) {
         std::wcout << i+1 << " - " << *nextRoutes[i] << std::endl;
     }
+}
+bool route::isAutoReturn() {
+    return autoReturn;
 }
 std::wostream& operator<<(std::wostream& out, const route& r) {
     out << r.name;

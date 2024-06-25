@@ -17,4 +17,5 @@ class car {
         std::wostream& getOutstreamBuffer(std::wostream& out) const;
         friend std::wostream& operator<<(std::wostream& out, const car& c);
 };
+
 #endif

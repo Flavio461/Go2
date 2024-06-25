@@ -12,13 +12,12 @@ void routeHandler::showRoutes() {
 route* routeHandler::getRoute(size_t i) {
     if(i<0) return nullptr;
     if(i==0) {
-        if(path==nullptr || path->getList()==nullptr) 
-        {
+        if(path==nullptr || path->getList()==nullptr) {
             std::wcout << L"Não é possível voltar!" << std::endl;
             return nullptr;
         }
         current = path->getNextRoute();
-        if (current->getFunction()!=nullptr) current->getFunction()(current);
+        if (current->getFunction()!=nullptr) while(!current->getFunction()(current, current->getValidateInput()?current->getValidateInput():[](std::wstring const&){return true;}) && current->getValidateInput()!=nullptr) {};
         return current;
     }
     if(i>current->getSize()) {
@@ -29,12 +28,17 @@ route* routeHandler::getRoute(size_t i) {
     else path->addRoute(current);
     if(current->getRoute(i-1)!=nullptr) {
         current = current->getRoute(i-1);
-        if (current->getFunction()!=nullptr) current->getFunction()(current);
+        if (current->getFunction()!=nullptr) while(!current->getFunction()(current, current->getValidateInput()?current->getValidateInput():[](std::wstring const&){return true;}) && current->getValidateInput()!=nullptr) {};
         return current;
     }
     return nullptr;
 }
 std::wstring routeHandler::dispose() {
+    if(current->isAutoReturn()) {
+        getRoute(0);
+        return L"0";
+    }
+
     std::wcout << L"Caminho atual: " << *current << *path << std::endl;
     std::wcout << L"Escolha uma opção ou feche o programa (\"sair\"): " << std::endl;
     showRoutes();

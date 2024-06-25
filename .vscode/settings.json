@@ -61,6 +61,13 @@
         "sstream": "cpp",
         "cinttypes": "cpp",
         "list": "cpp",
-        "xhash": "cpp"
+        "xhash": "cpp",
+        "locale": "cpp",
+        "xlocbuf": "cpp",
+        "xlocmes": "cpp",
+        "xlocmon": "cpp",
+        "xloctime": "cpp",
+        "cstdarg": "cpp",
+        "fstream": "cpp"
     }
 }
