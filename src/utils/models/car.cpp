@@ -1,6 +1,9 @@
 #include "car.hpp"
 
-car::car(int id, const wchar_t* model, const wchar_t* plate) : id(id), model(wcsdup(model)), plate(wcsdup(plate)) {}
+car::car(const wchar_t* model, const wchar_t* plate) : model(wcsdup(model)), plate(wcsdup(plate)) {
+    static int id = 0;
+    this->id = id++;
+}
 car::~car() {free(this->model); free(this->plate);}
 void car::setModel(const wchar_t* model) {free(this->model); this->model = wcsdup(model);}
 void car::setPlate(const wchar_t* plate) {free(this->plate); this->plate = wcsdup(plate);}

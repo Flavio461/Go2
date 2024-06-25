@@ -7,17 +7,20 @@
 #include <string.h>
 #include "user.hpp"
 
-user::user(const wchar_t* name, const wchar_t* email, const wchar_t* phone, const wchar_t* password) :  name(wcsdup(name)), email(wcsdup(email)), phone(wcsdup(phone)), password(wcsdup(password)) {}
-user::~user() {free(this->name); free(this->email); free(this->phone); free(this->password);}
+user::user(const wchar_t* name, const wchar_t* email, const wchar_t* phone, int id) : name(wcsdup(name)), email(wcsdup(email)), phone(wcsdup(phone)), id(id) {
+    if (id != -1) return;
+    static int iid = 0;
+    this->id = iid++;
+}
+
+user::~user() {free(this->name); free(this->email); free(this->phone);}
 void user::setName(const wchar_t* name) {free(this->name); this->name = wcsdup(name);}
 void user::setEmail(const wchar_t* email) {free(this->email); this->email = wcsdup(email);}
 void user::setPhone(const wchar_t* phone) {free(this->phone); this->phone = wcsdup(phone);}
-void user::setPassword(const wchar_t* password) {free(this->password); this->password = wcsdup(password);}
 int user::getId() {return id;}
 wchar_t* user::getName() {return name;}
 wchar_t* user::getEmail() {return email;}
 wchar_t* user::getPhone() {return phone;}
-wchar_t* user::getPassword() {return password;}
 std::wostream& user::getOutstreamBuffer(std::wostream& out) const {return (out << "ID: " << id << "\n" << "Nome: " << name << "\n" << "Email: " << email << "\n" << "Telefone: " << phone);}
 
 //Adiciona o operador de inserção para que seja possível imprimir o objeto

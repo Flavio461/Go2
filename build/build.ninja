@@ -224,12 +224,12 @@ build CMakeFiles/Go2.dir/src/main.cpp.obj: CXX_COMPILER__Go2_unscanned_Debug C$:
   OBJECT_DIR = CMakeFiles\Go2.dir
   OBJECT_FILE_DIR = CMakeFiles\Go2.dir\src
 
-build CMakeFiles/Go2.dir/src/utils/user.cpp.obj: CXX_COMPILER__Go2_unscanned_Debug C$:/Projects/Go2/src/utils/user.cpp || cmake_object_order_depends_target_Go2
-  DEP_FILE = CMakeFiles\Go2.dir\src\utils\user.cpp.obj.d
+build CMakeFiles/Go2.dir/src/utils/models/user.cpp.obj: CXX_COMPILER__Go2_unscanned_Debug C$:/Projects/Go2/src/utils/models/user.cpp || cmake_object_order_depends_target_Go2
+  DEP_FILE = CMakeFiles\Go2.dir\src\utils\models\user.cpp.obj.d
   FLAGS = -g
   INCLUDES = -IC:/Projects/Go2/src
   OBJECT_DIR = CMakeFiles\Go2.dir
-  OBJECT_FILE_DIR = CMakeFiles\Go2.dir\src\utils
+  OBJECT_FILE_DIR = CMakeFiles\Go2.dir\src\utils\models
 
 build CMakeFiles/Go2.dir/src/utils/models/car.cpp.obj: CXX_COMPILER__Go2_unscanned_Debug C$:/Projects/Go2/src/utils/models/car.cpp || cmake_object_order_depends_target_Go2
   DEP_FILE = CMakeFiles\Go2.dir\src\utils\models\car.cpp.obj.d
@@ -287,6 +287,13 @@ build CMakeFiles/Go2.dir/src/utils/data_base/SHA256.cpp.obj: CXX_COMPILER__Go2_u
   OBJECT_DIR = CMakeFiles\Go2.dir
   OBJECT_FILE_DIR = CMakeFiles\Go2.dir\src\utils\data_base
 
+build CMakeFiles/Go2.dir/src/utils/data_base/dataBaseAPI.cpp.obj: CXX_COMPILER__Go2_unscanned_Debug C$:/Projects/Go2/src/utils/data_base/dataBaseAPI.cpp || cmake_object_order_depends_target_Go2
+  DEP_FILE = CMakeFiles\Go2.dir\src\utils\data_base\dataBaseAPI.cpp.obj.d
+  FLAGS = -g
+  INCLUDES = -IC:/Projects/Go2/src
+  OBJECT_DIR = CMakeFiles\Go2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Go2.dir\src\utils\data_base
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Go2
@@ -295,7 +302,7 @@ build CMakeFiles/Go2.dir/src/utils/data_base/SHA256.cpp.obj: CXX_COMPILER__Go2_u
 #############################################
 # Link the executable Go2.exe
 
-build Go2.exe: CXX_EXECUTABLE_LINKER__Go2_Debug CMakeFiles/Go2.dir/src/main.cpp.obj CMakeFiles/Go2.dir/src/utils/user.cpp.obj CMakeFiles/Go2.dir/src/utils/models/car.cpp.obj CMakeFiles/Go2.dir/src/utils/models/driver.cpp.obj CMakeFiles/Go2.dir/src/utils/route.cpp.obj CMakeFiles/Go2.dir/src/utils/routeHandler.cpp.obj CMakeFiles/Go2.dir/src/utils/routePath.cpp.obj CMakeFiles/Go2.dir/src/utils/models/routeTemplates.cpp.obj CMakeFiles/Go2.dir/src/routes/session.cpp.obj CMakeFiles/Go2.dir/src/utils/data_base/SHA256.cpp.obj
+build Go2.exe: CXX_EXECUTABLE_LINKER__Go2_Debug CMakeFiles/Go2.dir/src/main.cpp.obj CMakeFiles/Go2.dir/src/utils/models/user.cpp.obj CMakeFiles/Go2.dir/src/utils/models/car.cpp.obj CMakeFiles/Go2.dir/src/utils/models/driver.cpp.obj CMakeFiles/Go2.dir/src/utils/route.cpp.obj CMakeFiles/Go2.dir/src/utils/routeHandler.cpp.obj CMakeFiles/Go2.dir/src/utils/routePath.cpp.obj CMakeFiles/Go2.dir/src/utils/models/routeTemplates.cpp.obj CMakeFiles/Go2.dir/src/routes/session.cpp.obj CMakeFiles/Go2.dir/src/utils/data_base/SHA256.cpp.obj CMakeFiles/Go2.dir/src/utils/data_base/dataBaseAPI.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Go2.dir
