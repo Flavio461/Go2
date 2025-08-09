@@ -1,0 +1,4 @@
+Biblioteca para criação de programas com menu de opções para CMD. O projeto inclui exemplos de uso, além de uma simples integração com um banco de dados de arquivos locais.
+Os menus são compostos de rotas, que possuem hierarquias, (pai e filho), além de funções e payloads, permitndo a definição de ações e recuperação de dados a partir de rotas superiors. Ademais, há um utilitário de navegação, que mantém o histórico de navegação de forma otimzada em uma linked list reversa.
+Faram utilizados conceitos de ponteiros, funções lambda, linked list reversa, dentre outros, o que exigiu vários ajustes e pesquisas para torná-lo funcional.
+Por fim, houveram muitos desafios na implementação, principalmente quanto à incapacidade das funções lambda não captarem variáveis em seu escopo, que foram resovidas através de um parâmetro que pode ser passado, contendo os dados necessários, se assemelhando ao "this" do Python.
